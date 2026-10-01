@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://7mjxog08ucjm" path="res://assets/player/Hurt-Effect/Warrior_hurt_2.png" id="14_8qxvo"]
 [ext_resource type="Texture2D" uid="uid://dadcsxc8kctxm" path="res://assets/player/Hurt-Effect/Warrior_hurt_3.png" id="15_5q8fn"]
 [ext_resource type="Texture2D" uid="uid://b1eu7xjxp8h6j" path="res://assets/player/Hurt-Effect/Warrior_hurt_4.png" id="16_wva7c"]
+[ext_resource type="Script" uid="uid://dxm84u7pb3h8s" path="res://global_scripts/state/state_machine.gd" id="26_6cv16"]
+[ext_resource type="Script" uid="uid://cev6mkk6ynakl" path="res://scenes/player/state/running.gd" id="27_j4nxn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_myrg7"]
 animations = [{
@@ -124,3 +126,14 @@ sprite_frames = SubResource("SpriteFrames_myrg7")
 animation = &"attack"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1513471233]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1425701333 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("26_6cv16")
+initial_state = NodePath("Running")
+
+[node name="Running" type="Node" parent="StateMachine" unique_id=413533941]
+script = ExtResource("27_j4nxn")
+
+[node name="Attacking" type="Node" parent="StateMachine" unique_id=787356373]
+
+[node name="Hit" type="Node" parent="StateMachine" unique_id=1631312059]

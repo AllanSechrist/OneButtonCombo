@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://b2t7a2wtyej60"]
 
 [ext_resource type="Script" uid="uid://bqkeq41h8oc4u" path="res://scenes/managers/game/game_manager.gd" id="1_6ivci"]
+[ext_resource type="PackedScene" uid="uid://yrpvla2c5aw7" path="res://scenes/player/player.tscn" id="2_h320y"]
 
 [node name="Sandbox" type="Node2D" unique_id=1408463756]
 script = ExtResource("1_6ivci")
+
+[node name="Player" parent="." unique_id=2080558141 instance=ExtResource("2_h320y")]

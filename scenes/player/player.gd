@@ -1,8 +1,4 @@
 extends Node2D
-class_name player
+class_name Player
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
-
-func _ready() -> void:
-	animated_sprite_2d.play("run")
