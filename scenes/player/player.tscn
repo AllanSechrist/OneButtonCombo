@@ -127,7 +127,7 @@ script = ExtResource("1_007i1")
 sprite_frames = SubResource("SpriteFrames_myrg7")
 animation = &"attack"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1513471233]
+[node name="CameraTransform" type="RemoteTransform2D" parent="." unique_id=1307196752]
 
 [node name="StateMachine" type="Node" parent="." unique_id=1425701333 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("26_6cv16")
