@@ -4,7 +4,7 @@ class_name GameManager
 @onready var player: Player = $Player
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var enemy_manager: EnemyManager = $EnemyManager
-@onready var follow: RemoteTransform2D = player.get_node("CameraTransform")
 
 func _ready() -> void:
-	follow.remote_path = follow.get_path_to(camera_2d)
+	var viewport_size := get_viewport_rect().size
+	camera_2d.position = Vector2(viewport_size / 2)

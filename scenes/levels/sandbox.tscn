@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://b2t7a2wtyej60"]
 
 [ext_resource type="Script" uid="uid://bqkeq41h8oc4u" path="res://scenes/managers/game/game_manager.gd" id="1_6ivci"]
+[ext_resource type="Script" uid="uid://du7dj4qmge6ef" path="res://scripts/parallax/parallax_2d.gd" id="2_a64th"]
 [ext_resource type="PackedScene" uid="uid://yrpvla2c5aw7" path="res://scenes/player/player.tscn" id="2_h320y"]
+[ext_resource type="Texture2D" uid="uid://d2l5454g00f2v" path="res://assets/world/Full-Background.png" id="3_b4sxl"]
 [ext_resource type="PackedScene" uid="uid://shk502x64fuj" path="res://scenes/managers/enemy/enemy_manager.tscn" id="3_xf1sy"]
 
 [node name="Sandbox" type="Node2D" unique_id=1408463756]
 script = ExtResource("1_6ivci")
 
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=340998372]
+script = ExtResource("2_a64th")
+
+[node name="Background" type="Sprite2D" parent="Parallax2D" unique_id=1083568278]
+texture = ExtResource("3_b4sxl")
+
 [node name="Player" parent="." unique_id=2080558141 instance=ExtResource("2_h320y")]
+position = Vector2(60, 136)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1831868252]
 

@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://7mjxog08ucjm" path="res://assets/player/Hurt-Effect/Warrior_hurt_2.png" id="14_8qxvo"]
 [ext_resource type="Texture2D" uid="uid://dadcsxc8kctxm" path="res://assets/player/Hurt-Effect/Warrior_hurt_3.png" id="15_5q8fn"]
 [ext_resource type="Texture2D" uid="uid://b1eu7xjxp8h6j" path="res://assets/player/Hurt-Effect/Warrior_hurt_4.png" id="16_wva7c"]
-[ext_resource type="Script" uid="uid://dxm84u7pb3h8s" path="res://global_scripts/state/state_machine.gd" id="26_6cv16"]
+[ext_resource type="Script" uid="uid://dxm84u7pb3h8s" path="res://scripts/state/state_machine.gd" id="26_6cv16"]
 [ext_resource type="Script" uid="uid://cev6mkk6ynakl" path="res://scenes/player/state/running.gd" id="27_j4nxn"]
 [ext_resource type="Script" uid="uid://cjsx1eyy33ish" path="res://scenes/player/state/attacking.gd" id="28_28m0y"]
 [ext_resource type="Script" uid="uid://bykpudbjmq5bm" path="res://scenes/player/state/hit.gd" id="29_uniwh"]
@@ -126,8 +126,6 @@ script = ExtResource("1_007i1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2128208685]
 sprite_frames = SubResource("SpriteFrames_myrg7")
 animation = &"attack"
-
-[node name="CameraTransform" type="RemoteTransform2D" parent="." unique_id=1307196752]
 
 [node name="StateMachine" type="Node" parent="." unique_id=1425701333 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("26_6cv16")
