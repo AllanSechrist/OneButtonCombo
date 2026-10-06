@@ -2,6 +2,8 @@ extends Parallax2D
 
 @onready var background: Sprite2D = $Background
 
+@export var scroll_speed := Vector2(-10, 0)
+
 func _ready() -> void:
 	background.centered = false
 	background.position = Vector2.ZERO
@@ -16,4 +18,4 @@ func _ready() -> void:
 	repeat_size = Vector2(scaled_width, 0)
 	repeat_times = int(ceil(viewport_size.x / scaled_width)) + 2
 	
-	autoscroll = Vector2(-10, 0)
+	autoscroll = scroll_speed
