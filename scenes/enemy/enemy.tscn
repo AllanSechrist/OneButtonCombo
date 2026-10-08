@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://d0dejm5b3im51"]
 
 [ext_resource type="Script" uid="uid://vs562w7wohjw" path="res://scenes/enemy/enemy.gd" id="1_qtpa6"]
+[ext_resource type="Resource" uid="uid://c8p3vf2xuek4n" path="res://custom_resources/enemies/skeleton.tres" id="2_40wdo"]
 [ext_resource type="SpriteFrames" uid="uid://eocwlmwe6s2o" path="res://custom_resources/enemies/skeleton_frames.tres" id="2_a3pup"]
 
 [node name="Enemy" type="Node2D" unique_id=1831584202]
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_qtpa6")
+data = ExtResource("2_40wdo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593100620]
 sprite_frames = ExtResource("2_a3pup")
